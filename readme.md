@@ -3,21 +3,20 @@
 
 Probabilistic supervised learning method. 
 Maximum a posteriori (MAP) - the best class, the most likely, for a given document d
-```
+
 c<sub>map</sub> = argmax P(c | d) = argmax P( c ) ∏  P( t<sub>k</sub> | c)
-```
+
 Multiplication acrossed many probabilities will lead to overflow. Alternative solution is to calculate c<sub>map</sub> using sum of logs.
-```
+
 c<sub>map</sub> = argmax [log P( c ) + ∑ P( t<sub>k</sub> | c)]
-```
+
 
 MLE - max likelihood estimate
-```
+
 P(c) = N<sub>c</sub> / N      
 
 P(t | c) = T<sub>ct</sub> / ( ∑<sub>t' in V</sub> T<sub>ct'</sub> )   
 
-```
 
 N is total number of docs.
 N<sub>c</sub> is number of docs in class c
